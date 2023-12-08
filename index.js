@@ -1,8 +1,9 @@
+const config = require("config");
 const TelegramBot = require("node-telegram-bot-api");
 const express = require("express");
 const cors = require("cors");
 
-const token = "6396795499:AAGYBUYKYTtioTTT2BP3KNGyu7Z5xzxevmo";
+const token = "TELEGRAM_TOKEN";
 const webAppUrl = "https://sunny-malasada-0310be.netlify.app";
 // const webAppUrl = "https://02e5-169-150-218-77.ngrok-free.app";
 const bot = new TelegramBot(token, { polling: true });
