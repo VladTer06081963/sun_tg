@@ -2,11 +2,23 @@ const TelegramBot = require("node-telegram-bot-api");
 const express = require("express");
 const cors = require("cors");
 
-const token = "6317239207:AAEV_sj0SQ0i-stxAMD-QZYboCBgbV5QdeA";
+const token = "6396795499:AAGYBUYKYTtioTTT2BP3KNGyu7Z5xzxevmo";
 const webAppUrl = "https://sunny-malasada-0310be.netlify.app";
-
+// const webAppUrl = "https://02e5-169-150-218-77.ngrok-free.app";
 const bot = new TelegramBot(token, { polling: true });
 const app = express();
+
+// определяем обработчик для маршрута "/"
+app.get("/", function (request, response) {
+  // отправляем ответ
+  response.send("<h2>Привет Express!!!!</h2>");
+});
+
+// определяем обработчик для маршрута "/"
+app.get("/form", function (request, response) {
+  // отправляем ответ
+  response.send("<h2>Привет Form!!!</h2>");
+});
 
 app.use(express.json());
 app.use(cors());
